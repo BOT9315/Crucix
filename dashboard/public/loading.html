@@ -68,7 +68,6 @@ const lines = [
   '└── TELEGRAM · WHO · OFAC · ACLED · REDDIT · BLUESKY',
   '<span class="ok">AWAITING SWEEP COMPLETION...</span>',
 ];
-
 const container = document.getElementById('bootLines');
 lines.forEach((text, i) => {
   setTimeout(() => {
@@ -112,7 +111,6 @@ function startCountdown(elapsedSeconds) {
     etaText.innerHTML = `EST. READY IN <span class="eta">~${remaining}s</span>`;
     remaining--;
   }
-
   tick();
   countdownInterval = setInterval(tick, 1000);
 }
@@ -139,7 +137,7 @@ es.onmessage = (e) => {
       clearInterval(countdownInterval);
       barFill.style.transition = 'width 0.4s ease';
       barFill.style.width = '100%';
-      etaText.textContent = '';
+      etaText.textContent ='';
       statusText.textContent = 'TERMINAL READY — LOADING DASHBOARD';
       setTimeout(() => location.replace('/'), 800);
     }
